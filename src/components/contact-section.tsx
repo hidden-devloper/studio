@@ -6,7 +6,7 @@ export default function ContactSection() {
     <section id="contact" className="py-24 sm:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl">Contact Me</h2>
+          <h2 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl inline-block px-4 py-2 rounded-lg shadow-2xl shadow-primary/40">Contact Me</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
