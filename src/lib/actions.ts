@@ -1,5 +1,6 @@
-"use server";
+'use server';
 
+import { z } from 'zod';
 import { contactFormSchema } from './schemas';
 
 export type FormState = {
@@ -21,27 +22,39 @@ export async function onContactSubmit(
       fields[key] = formData[key].toString();
     }
     return {
-      message: "Invalid form data. Please check the fields and try again.",
+      message: 'Invalid form data. Please check the fields and try again.',
       fields,
       issues: parsed.error.issues.map((issue) => issue.message),
     };
   }
-  
-  // In a real application, you would integrate with a service like Formspree or EmailJS here.
-  // For example, by making a fetch request to your service's endpoint.
-  //
-  // const response = await fetch('YOUR_EMAIL_SERVICE_ENDPOINT', {
-  //   method: 'POST',
-  //   headers: { 'Content-Type': 'application/json' },
-  //   body: JSON.stringify(parsed.data),
-  // });
-  //
-  // if (!response.ok) {
-  //   return { message: "Failed to send message. Please try again later." };
-  // }
 
-  console.log('Form data submitted successfully:');
-  console.log(parsed.data);
+  const googleSheetUrl = process.env.GOOGLE_SHEET_WEB_APP_URL;
 
-  return { message: "Your message has been sent successfully!" };
+  if (!googleSheetUrl) {
+    console.error('Google Sheet Web App URL is not configured.');
+    return {
+      message: 'Server configuration error. Could not submit form.',
+      issues: ['Configuration error.'],
+    };
+  }
+
+  try {
+    const response = await fetch(googleSheetUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(parsed.data),
+    });
+
+    if (!response.ok) {
+      console.error('Failed to send data to Google Sheet');
+      return { message: 'Failed to send message. Please try again later.' };
+    }
+
+    return { message: 'Your message has been sent successfully!' };
+  } catch (error) {
+    console.error('Error submitting to Google Sheet:', error);
+    return { message: 'An unexpected error occurred. Please try again.' };
+  }
 }
