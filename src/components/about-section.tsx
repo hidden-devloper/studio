@@ -15,14 +15,14 @@ export default function AboutSection() {
                 alt="A person in a hijab working on a laptop"
                 width={400}
                 height={400}
-                className="object-cover rounded-full shadow-2xl shadow-primary/20 w-full h-full"
+                className="object-cover rounded-full shadow-2xl shadow-primary/40 w-full h-full"
                 data-ai-hint="woman laptop"
               />
             </div>
           </div>
           <div className="md:col-span-2">
             <p className="text-lg text-foreground/80 leading-relaxed">
-              Hello! I'm Tashmiya Naz, a Software Engineering student with a deep-seated passion for turning complex problems into elegant, user-centric digital experiences. My journey in tech is driven by a relentless curiosity and a love for building things that are both beautiful and functional. I excel in collaborative settings and am always learning. I'm committed to quality and craftsmanship in the entire development lifecycle. My focus is on web and Android development, along with logo design and video editing.
+              I'm Tashmiya Naz, a Software Engineering student passionate about turning complex problems into elegant, user-centric digital experiences. My journey in tech is driven by a relentless curiosity and a love for creating beautiful, functional products. I thrive in collaborative settings and am committed to quality throughout the development lifecycle. My focus is web/Android development, logo design, and video editing.
             </p>
           </div>
         </div>
