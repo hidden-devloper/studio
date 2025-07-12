@@ -11,7 +11,7 @@ export default function AboutSection() {
           <div className="md:col-span-1 flex justify-center">
             <div className="relative w-64 h-64 sm:w-80 sm:h-80">
               <Image
-                src="https://firebasestorage.googleapis.com/v0/b/genkit-llm-78335.appspot.com/o/1b122f8a-c60f-4886-ab47-862d88c9f357?alt=media&token=e8c95a02-5c81-42cb-b75d-3d443fd65cfb"
+                src="https://firebasestorage.googleapis.com/v0/b/genkit-llm-78335.appspot.com/o/4f80a4a6-7d65-4d7a-b9c1-8b9a25b39976?alt=media&token=f69c585c-6b3a-4424-9b6f-7d1a52e97672"
                 alt="A person in a hijab working on a laptop"
                 width={400}
                 height={400}
@@ -22,7 +22,10 @@ export default function AboutSection() {
           </div>
           <div className="md:col-span-2">
             <p className="text-lg text-foreground/80 leading-relaxed">
-              I'm Tashmiya Naz, a Software Engineering student passionate about turning complex problems into elegant, user-centric digital experiences. My journey in tech is driven by a relentless curiosity and a love for creating beautiful, functional products. I thrive in collaborative settings and am committed to quality throughout the development lifecycle. My focus is web/Android development, logo design, and video editing.
+              I'm Tashmiya Naz, a Software Engineering student passionate about
+              turning complex problems into elegant, user-centric digital
+              experiences. My journey in tech is driven by a relentless
+              curiosity and a love for creating beautiful, functional products.
             </p>
           </div>
         </div>
