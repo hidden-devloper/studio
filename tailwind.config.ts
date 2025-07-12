@@ -108,12 +108,17 @@ export default {
                 transform: 'translateY(0)',
             },
         },
+        'blink': {
+          '0%, 100%': { borderColor: 'transparent' },
+          '50%': { borderColor: 'hsl(var(--primary))' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in-down': 'fade-in-down 0.5s ease-out forwards',
         'slide-up': 'slide-up 0.5s ease-out forwards',
+        'blink': 'blink 1s step-end infinite',
       },
     },
   },
