@@ -7,29 +7,28 @@ export default function AboutSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl">About Me</h2>
-          <p className="mt-4 text-lg text-foreground/80">A brief introduction to who I am and what I do.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-12 items-center">
           <div className="md:col-span-2">
             <Card className="overflow-hidden shadow-2xl shadow-primary/10">
                 <CardContent className="p-0">
                     <Image
-                        src="https://placehold.co/600x600.png"
-                        alt="A portrait of Tashmiya Naz"
+                        src="https://firebasestorage.googleapis.com/v0/b/genkit-llm-78335.appspot.com/o/1b122f8a-c60f-4886-ab47-862d88c9f357?alt=media&token=e8c95a02-5c81-42cb-b75d-3d443fd65cfb"
+                        alt="A person in a hijab working on a laptop"
                         width={600}
                         height={600}
                         className="object-cover w-full h-full"
-                        data-ai-hint="portrait woman"
+                        data-ai-hint="woman laptop"
                     />
                 </CardContent>
             </Card>
           </div>
           <div className="md:col-span-3">
             <p className="text-lg text-foreground/80 leading-relaxed">
-              Hello! I'm Tashmiya Naz, a passionate and driven Software Engineering student with a keen interest in creating elegant and efficient solutions to complex problems. My journey into the world of technology began with a curiosity for how things work, which quickly blossomed into a love for coding and development.
+              Hello! I'm Tashmiya Naz, a Software Engineering student with a deep-seated passion for turning complex problems into elegant, user-centric digital experiences. My journey in tech is driven by a relentless curiosity and a love for building things that are both beautiful and functional.
             </p>
             <p className="mt-4 text-lg text-foreground/80 leading-relaxed">
-              I thrive in collaborative environments and am always eager to learn new technologies and methodologies. From crafting intuitive user interfaces to building robust backend systems, I enjoy every aspect of the development lifecycle. I'm currently expanding my skills in Android development and exploring the creative realms of logo design and video editing.
+              I excel in collaborative settings, constantly seeking to learn and adapt to new technologies. Whether I'm designing a responsive interface or architecting a backend, I am committed to quality and craftsmanship throughout the entire development lifecycle. My current focus is on mastering web and Android development, while also exploring my creative side through logo design and video editing.
             </p>
           </div>
         </div>

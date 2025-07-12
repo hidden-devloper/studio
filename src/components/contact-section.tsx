@@ -7,7 +7,6 @@ export default function ContactSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl">Contact Me</h2>
-          <p className="mt-4 text-lg text-foreground/80">Let's build something amazing together.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
