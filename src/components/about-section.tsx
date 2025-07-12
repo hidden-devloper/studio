@@ -13,7 +13,7 @@ export default function AboutSection() {
             <Card className="overflow-hidden shadow-2xl shadow-primary/10">
                 <CardContent className="p-0">
                     <Image
-                        src="https://firebasestorage.googleapis.com/v0/b/genkit-llm-78335.appspot.com/o/1b122f8a-c60f-4886-ab47-862d88c9f357?alt=media&token=e8c95a02-5c81-42cb-b75d-3d443fd65cfb"
+                        src="https://placehold.co/600x600.png"
                         alt="A person in a hijab working on a laptop"
                         width={600}
                         height={600}

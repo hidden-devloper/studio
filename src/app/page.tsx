@@ -16,10 +16,12 @@ export default function Home() {
       threshold: 0.1,
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-slide-up');
+          // Optional: unobserve after animation to prevent re-triggering
+          obs.unobserve(entry.target);
         }
       });
     }, options);
