@@ -19,7 +19,7 @@ export default function Home() {
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('animate-slide-up');
+          entry.target.classList.add('animate-zoom-in');
           // Optional: unobserve after animation to prevent re-triggering
           obs.unobserve(entry.target);
         }

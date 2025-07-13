@@ -108,6 +108,16 @@ export default {
                 transform: 'translateY(0)',
             },
         },
+        'zoom-in': {
+          '0%': {
+              opacity: '0',
+              transform: 'scale(0.95)',
+          },
+          '100%': {
+              opacity: '1',
+              transform: 'scale(1)',
+          },
+        },
         'blink': {
           '0%, 100%': { borderColor: 'transparent' },
           '50%': { borderColor: 'hsl(var(--primary))' },
@@ -118,6 +128,7 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in-down': 'fade-in-down 0.5s ease-out forwards',
         'slide-up': 'slide-up 0.5s ease-out forwards',
+        'zoom-in': 'zoom-in 0.6s ease-out forwards',
         'blink': 'blink 1s step-end infinite',
       },
     },
