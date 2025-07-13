@@ -122,11 +122,6 @@ export default {
           '0%, 100%': { borderColor: 'transparent' },
           '50%': { borderColor: 'hsl(var(--primary))' },
         },
-        'border-spin': {
-            '100%': {
-                transform: 'rotate(360deg)',
-            },
-        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -135,7 +130,6 @@ export default {
         'slide-up': 'slide-up 0.5s ease-out forwards',
         'zoom-in': 'zoom-in 0.6s ease-out forwards',
         'blink': 'blink 1s step-end infinite',
-        'border-spin': 'border-spin 7s linear infinite',
       },
     },
   },

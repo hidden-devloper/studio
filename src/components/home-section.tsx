@@ -74,9 +74,8 @@ export default function HomeSection() {
           <span className="block tracking-tighter text-primary -mt-2">Naz</span>
         </h1>
         <TypingEffect />
-        <Link href="#contact" className="relative group">
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-secondary rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-border-spin"></div>
-            <Button size="lg" className="relative font-bold w-full">
+        <Link href="#contact">
+            <Button size="lg" className="font-bold">
                 Get In Touch
             </Button>
         </Link>
