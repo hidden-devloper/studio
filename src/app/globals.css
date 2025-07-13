@@ -89,24 +89,3 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
-@layer utilities {
-  .bg-particle-gradient {
-    background: radial-gradient(ellipse at center, hsl(var(--primary) / 0.1) 0%, transparent 70%);
-  }
-
-  @keyframes move-particles {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(100vw, 100vh);
-    }
-  }
-
-  .particle {
-    position: absolute;
-    border-radius: 50%;
-    animation: move-particles 50s linear infinite;
-  }
-}
