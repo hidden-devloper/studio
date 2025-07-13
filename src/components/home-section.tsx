@@ -2,16 +2,10 @@
 import { useState, useEffect } from 'react';
 import AnimatedBackground from './animated-background';
 import { Button } from './ui/button';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, MapPin } from 'lucide-react';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
 
-const roles = [
-  'I am making websites.',
-  'I am making an app.',
-  'I am making logos.',
-  'I am editing videos.',
-];
+const locations = ['Madhya Pradesh, India'];
 
 const TypingEffect = () => {
   const [index, setIndex] = useState(0);
@@ -20,33 +14,34 @@ const TypingEffect = () => {
   const [text, setText] = useState('');
 
   useEffect(() => {
-    if (index === roles.length) {
+    if (index === locations.length) {
       setIndex(0);
       return;
     }
 
-    const currentRole = roles[index];
+    const currentLocation = locations[index];
 
     if (isDeleting) {
       if (subIndex === 0) {
         setIsDeleting(false);
-        setIndex((prev) => (prev + 1) % roles.length);
-        return;
+        setIndex((prev) => (prev + 1) % locations.length);
+        const holdTimeout = setTimeout(() => {}, 2000);
+        return () => clearTimeout(holdTimeout);
       }
       const timeout = setTimeout(() => {
-        setText(currentRole.substring(0, subIndex - 1));
+        setText(currentLocation.substring(0, subIndex - 1));
         setSubIndex((prev) => prev - 1);
       }, 50);
       return () => clearTimeout(timeout);
     }
 
-    if (subIndex === currentRole.length) {
-      const delay = setTimeout(() => setIsDeleting(true), 1500);
+    if (subIndex === currentLocation.length) {
+      const delay = setTimeout(() => setIsDeleting(true), 2500);
       return () => clearTimeout(delay);
     }
 
     const timeout = setTimeout(() => {
-      setText(currentRole.substring(0, subIndex + 1));
+      setText(currentLocation.substring(0, subIndex + 1));
       setSubIndex((prev) => prev + 1);
     }, 100);
 
@@ -54,7 +49,8 @@ const TypingEffect = () => {
   }, [subIndex, index, isDeleting]);
 
   return (
-    <div className="text-xl md:text-2xl text-primary font-medium mb-8 h-8">
+    <div className="flex items-center justify-center text-xl md:text-2xl text-primary font-medium mb-8 h-8">
+      <MapPin className="mr-2 h-6 w-6" />
       <span>{text}</span>
       <span className="animate-blink border-r-2 border-primary ml-1" />
     </div>
@@ -70,7 +66,6 @@ export default function HomeSection() {
           <span className="tracking-widest">Tashmiya</span>
           <span className="block tracking-tighter text-primary -mt-2">Naz</span>
         </h1>
-        <p className="text-2xl md:text-3xl font-medium mb-4">I am doing coding</p>
         <TypingEffect />
         <Link href="#contact">
           <Button size="lg" className="font-bold">
