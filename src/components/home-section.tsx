@@ -7,10 +7,10 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
 const roles = [
-  'I build websites.',
-  'I develop apps.',
-  'I design logos.',
-  'I edit videos.',
+  'I am making websites.',
+  'I am making an app.',
+  'I am making logos.',
+  'I am editing videos.',
 ];
 
 const TypingEffect = () => {
@@ -70,6 +70,7 @@ export default function HomeSection() {
           <span className="tracking-widest">Tashmiya</span>
           <span className="block tracking-tighter text-primary -mt-2">Naz</span>
         </h1>
+        <p className="text-2xl md:text-3xl font-medium mb-4">I am doing coding</p>
         <TypingEffect />
         <Link href="#contact">
           <Button size="lg" className="font-bold">
