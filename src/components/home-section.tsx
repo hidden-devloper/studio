@@ -54,8 +54,7 @@ const TypingEffect = () => {
   }, [subIndex, index, isDeleting]);
 
   return (
-    <div className="flex flex-col items-center justify-center text-xl md:text-2xl text-foreground/80 font-medium mb-8 h-14">
-      <p>I am doing coding</p>
+    <div className="flex flex-col items-center justify-center text-xl md:text-2xl text-primary font-medium mb-8 h-14">
       <div className="flex items-center h-8">
         <span>{text}</span>
         <span className="animate-blink border-r-2 border-primary ml-1" />
