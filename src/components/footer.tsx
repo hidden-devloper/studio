@@ -1,4 +1,4 @@
-import { Code, Github, Linkedin, Twitter } from 'lucide-react';
+import { Code, Github, Instagram } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -14,11 +14,8 @@ export default function Footer() {
             <a href="https://github.com/hidden-devloper-" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors" aria-label="GitHub">
               <Github />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors" aria-label="LinkedIn">
-              <Linkedin />
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors" aria-label="Twitter">
-              <Twitter />
+            <a href="#" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors" aria-label="Instagram">
+              <Instagram />
             </a>
           </div>
           <p className="text-sm text-foreground/60">
