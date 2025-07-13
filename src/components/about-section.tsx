@@ -25,8 +25,8 @@ export default function AboutSection() {
                   <p className="text-foreground/90">Tashmiya Naz</p>
                 </div>
                 <div>
-                  <p className="text-primary font-semibold">Role:</p>
-                  <p className="text-foreground/90">CS Engineering Student</p>
+                  <p className="text-primary font-semibold">Location:</p>
+                  <p className="text-foreground/90">Madhya Pradesh, India</p>
                 </div>
               </div>
               <p className="text-center text-foreground/80 leading-relaxed">

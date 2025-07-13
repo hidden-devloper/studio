@@ -2,10 +2,15 @@
 import { useState, useEffect } from 'react';
 import AnimatedBackground from './animated-background';
 import { Button } from './ui/button';
-import { ArrowDown, MapPin } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
 
-const locations = ['Madhya Pradesh, India'];
+const services = [
+  'i am making websites',
+  'i am making app',
+  'making logos',
+  'editing vedios',
+];
 
 const TypingEffect = () => {
   const [index, setIndex] = useState(0);
@@ -14,34 +19,34 @@ const TypingEffect = () => {
   const [text, setText] = useState('');
 
   useEffect(() => {
-    if (index === locations.length) {
+    if (index === services.length) {
       setIndex(0);
       return;
     }
 
-    const currentLocation = locations[index];
+    const currentService = services[index];
 
     if (isDeleting) {
       if (subIndex === 0) {
         setIsDeleting(false);
-        setIndex((prev) => (prev + 1) % locations.length);
+        setIndex((prev) => (prev + 1) % services.length);
         const holdTimeout = setTimeout(() => {}, 2000);
         return () => clearTimeout(holdTimeout);
       }
       const timeout = setTimeout(() => {
-        setText(currentLocation.substring(0, subIndex - 1));
+        setText(currentService.substring(0, subIndex - 1));
         setSubIndex((prev) => prev - 1);
       }, 50);
       return () => clearTimeout(timeout);
     }
 
-    if (subIndex === currentLocation.length) {
+    if (subIndex === currentService.length) {
       const delay = setTimeout(() => setIsDeleting(true), 2500);
       return () => clearTimeout(delay);
     }
 
     const timeout = setTimeout(() => {
-      setText(currentLocation.substring(0, subIndex + 1));
+      setText(currentService.substring(0, subIndex + 1));
       setSubIndex((prev) => prev + 1);
     }, 100);
 
@@ -49,10 +54,12 @@ const TypingEffect = () => {
   }, [subIndex, index, isDeleting]);
 
   return (
-    <div className="flex items-center justify-center text-xl md:text-2xl text-primary font-medium mb-8 h-8">
-      <MapPin className="mr-2 h-6 w-6" />
-      <span>{text}</span>
-      <span className="animate-blink border-r-2 border-primary ml-1" />
+    <div className="flex flex-col items-center justify-center text-xl md:text-2xl text-foreground/80 font-medium mb-8 h-14">
+      <p>I am doing coding</p>
+      <div className="flex items-center h-8">
+        <span>{text}</span>
+        <span className="animate-blink border-r-2 border-primary ml-1" />
+      </div>
     </div>
   );
 };
