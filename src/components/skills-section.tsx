@@ -3,7 +3,7 @@ import { Code, Smartphone, Palette, Film } from 'lucide-react';
 
 const skills = [
   { name: 'Web Development', icon: <Code size={32} /> },
-  { name: 'Android Development', icon: <Smartphone size={32} /> },
+  { name: 'App Development', icon: <Smartphone size={32} /> },
   { name: 'Logo Design', icon: <Palette size={32} /> },
   { name: 'Video Editing', icon: <Film size={32} /> },
 ];
