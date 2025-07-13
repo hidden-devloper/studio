@@ -1,33 +1,42 @@
-import Image from 'next/image';
+import { User } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 
 export default function AboutSection() {
   return (
     <section id="about" className="py-24 sm:py-32 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl">About Me</h2>
+          <h2 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl">
+            About Me
+          </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 items-center">
-          <div className="md:col-span-1 flex justify-center">
-            <div className="relative w-64 h-64 sm:w-80 sm:h-80">
-              <Image
-                src="https://firebasestorage.googleapis.com/v0/b/genkit-llm-78335.appspot.com/o/4f80a4a6-7d65-4d7a-b9c1-8b9a25b39976?alt=media&token=f69c585c-6b3a-4424-9b6f-7d1a52e97672"
-                alt="A person in a hijab working on a laptop"
-                width={400}
-                height={400}
-                className="object-cover rounded-full shadow-2xl shadow-primary/40 w-full h-full"
-                data-ai-hint="woman laptop"
-              />
-            </div>
-          </div>
-          <div className="md:col-span-2">
-            <p className="text-lg text-foreground/80 leading-relaxed">
-              I'm Tashmiya Naz, a Software Engineering student passionate about
-              turning complex problems into elegant, user-centric digital
-              experiences. My journey in tech is driven by a relentless
-              curiosity and a love for creating beautiful, functional products.
-            </p>
-          </div>
+        <div className="flex justify-center">
+          <Card className="w-full max-w-2xl bg-card/50 shadow-2xl shadow-primary/20">
+            <CardHeader className="text-center">
+              <div className="inline-flex items-center justify-center p-3 bg-primary/10 rounded-full mx-auto mb-4">
+                  <User className="h-8 w-8 text-primary" />
+              </div>
+              <CardTitle className="text-3xl font-headline">Who I Am</CardTitle>
+            </CardHeader>
+            <CardContent className="px-8 pb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 mb-6 text-lg">
+                <div>
+                  <p className="text-primary font-semibold">Name:</p>
+                  <p className="text-foreground/90">Tashmiya Naz</p>
+                </div>
+                <div>
+                  <p className="text-primary font-semibold">Role:</p>
+                  <p className="text-foreground/90">CS Engineering Student</p>
+                </div>
+              </div>
+              <p className="text-center text-foreground/80 leading-relaxed">
+                I'm a computer science student with a passion for turning
+                complex problems into elegant, user-centric digital
+                experiences. My journey in tech is driven by a relentless
+                curiosity and a love for creating beautiful, functional products.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
