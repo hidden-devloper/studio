@@ -11,7 +11,7 @@ export default function Footer() {
             <span>TashmiyaNaz.dev</span>
           </Link>
           <div className="flex items-center space-x-4">
-            <a href="https://github.com/tashmiyanaz" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors" aria-label="GitHub">
+            <a href="https://github.com/hidden-devloper" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors" aria-label="GitHub">
               <Github />
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors" aria-label="Instagram">
