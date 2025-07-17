@@ -10,12 +10,12 @@ export default function AboutSection() {
             <div className="relative w-full max-w-sm">
                <div className="absolute inset-0 bg-primary rounded-full transform -rotate-6"></div>
                <Image
-                src="https://placehold.co/600x600.png"
+                src="https://firebasestorage.googleapis.com/v0/b/genkit-llm-7a69a.appspot.com/o/images%2F9a007736-d71e-4581-9b16-92c72b226e6d?alt=media&token=e937e0c4-9548-406a-a131-4171a4f009e4"
                 alt="A portrait of Tashmiya Naz"
                 width={600}
                 height={600}
                 className="relative rounded-full object-cover shadow-2xl shadow-primary/30"
-                data-ai-hint="portrait woman"
+                data-ai-hint="woman laptop"
               />
             </div>
           </div>
