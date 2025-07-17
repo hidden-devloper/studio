@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react';
 import AnimatedBackground from './animated-background';
 import { Button } from './ui/button';
-import { ArrowDown } from 'lucide-react';
 import Link from 'next/link';
 
 const services = [
@@ -36,7 +35,7 @@ const TypingEffect = () => {
       const timeout = setTimeout(() => {
         setText(currentService.substring(0, subIndex - 1));
         setSubIndex((prev) => prev - 1);
-      }, 50);
+      }, 30);
       return () => clearTimeout(timeout);
     }
 
@@ -48,7 +47,7 @@ const TypingEffect = () => {
     const timeout = setTimeout(() => {
       setText(currentService.substring(0, subIndex + 1));
       setSubIndex((prev) => prev + 1);
-    }, 100);
+    }, 75);
 
     return () => clearTimeout(timeout);
   }, [subIndex, index, isDeleting]);
@@ -74,16 +73,11 @@ export default function HomeSection() {
           <span className="block tracking-tighter text-primary -mt-2">Naz</span>
         </h1>
         <TypingEffect />
-        <Link href="#contact">
-            <Button size="lg" className="font-bold">
-                Get In Touch
-            </Button>
+        <Link href="#contact" passHref>
+          <Button size="lg" className="font-bold">
+              Get In Touch
+          </Button>
         </Link>
-      </div>
-      <div className="absolute bottom-10 animate-bounce">
-         <Link href="#about" aria-label="Scroll to about section">
-            <ArrowDown className="h-8 w-8 text-foreground/50" />
-         </Link>
       </div>
     </section>
   );
