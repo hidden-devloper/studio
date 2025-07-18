@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <Link href="#home" className="flex items-center gap-2 text-lg font-bold font-headline">
             <Code className="text-primary" />
-            <span>TashmiyaNaz.dev</span>
+            <span>naz.dev</span>
           </Link>
           <div className="flex items-center space-x-4">
             <a href="https://github.com/hidden-devloper" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-primary transition-colors" aria-label="GitHub">
