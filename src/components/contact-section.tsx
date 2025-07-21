@@ -12,7 +12,7 @@ export default function ContactSection() {
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold font-headline">Get in touch</h3>
             <p className="text-foreground/80 leading-relaxed">
-              I'm open to discussing new projects, creative ideas, or opportunities to be part of your visions. Fill out the form, or email me directly.
+              Need a modern website, a custom app, or another digital solution? Let's connect! I'm ready to bring your ideas to life. Fill out the form below or email me to get started.
             </p>
             <div className="space-y-4">
               <a href="mailto:tashmiyanaz@gmail.com" className="inline-flex items-center gap-4 group rounded-lg p-2 -m-2 transition-colors hover:bg-card">
