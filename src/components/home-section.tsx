@@ -69,7 +69,7 @@ export default function HomeSection() {
       <AnimatedBackground />
       <div className="z-10 flex flex-col items-center">
         <h1 className="text-5xl md:text-7xl font-bold font-headline mb-4 animate-fade-in-down">
-          <span>naz.dev</span>
+          <span>naaz.dev</span>
         </h1>
         <TypingEffect />
         <Link href="#contact" passHref>
