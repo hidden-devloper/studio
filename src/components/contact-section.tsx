@@ -1,5 +1,5 @@
 import ContactForm from './contact-form';
-import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
 
 export default function ContactSection() {
   return (
@@ -10,14 +10,14 @@ export default function ContactSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold font-headline">Get in touch</h3>
+            <h3 className="text-2xl font-headline font-semibold">Get in touch</h3>
             <p className="text-foreground/80 leading-relaxed">
               Contact if you want any digital services such as website, app or SEO.
             </p>
             <div className="space-y-4">
-              <a href="mailto:tashmiyanaz@gmail.com" className="inline-flex items-center gap-4 group rounded-lg p-2 -m-2 transition-colors hover:bg-card">
-                <Mail className="h-6 w-6 text-primary flex-shrink-0" />
-                <span className="text-lg group-hover:text-primary transition-colors">tashmiyanaz@gmail.com</span>
+              <a href="tel:9285288643" className="inline-flex items-center gap-4 group rounded-lg p-2 -m-2 transition-colors hover:bg-card">
+                <Phone className="h-6 w-6 text-primary flex-shrink-0" />
+                <span className="text-lg group-hover:text-primary transition-colors">9285288643</span>
               </a>
             </div>
           </div>
