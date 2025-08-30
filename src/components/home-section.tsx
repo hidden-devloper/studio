@@ -5,10 +5,10 @@ import { Button } from './ui/button';
 import Link from 'next/link';
 
 const services = [
-  'making websites 💻',
-  'doing 🖥️coding',
-  'making app 📱',
-  'developing software',
+  'make websites 💻',
+  'make apps 📱',
+  'do SEO 🚀',
+  'develop software',
 ];
 
 const TypingEffect = () => {
@@ -55,7 +55,7 @@ const TypingEffect = () => {
   return (
     <div className="flex flex-col items-center justify-center text-xl md:text-2xl font-medium mb-8 h-14">
       <div className="flex items-center h-8">
-        <span>i am&nbsp;</span>
+        <span>i can&nbsp;</span>
         <span className="text-primary">{text}</span>
         <span className="animate-blink border-r-2 border-primary ml-1" />
       </div>
