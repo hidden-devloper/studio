@@ -69,8 +69,7 @@ export default function HomeSection() {
       <AnimatedBackground />
       <div className="z-10 flex flex-col items-center">
         <h1 className="text-5xl md:text-7xl font-bold font-headline mb-4 animate-fade-in-down">
-          <span className="tracking-widest">Tashmiya</span>
-          <span className="block tracking-tighter text-primary -mt-2">Naz</span>
+          <span>naz.dev</span>
         </h1>
         <TypingEffect />
         <Link href="#contact" passHref>
